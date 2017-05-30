@@ -10,10 +10,6 @@ var currentSum = 0;
 
 
 //GAME START
-//At the start of the game these things occur:
-//Into an empty container generate--target number, four crystal buttons with random values
-//Add Value into HTML, use jQuery to change value of buttons 
-
 //Generate Target
 function generateTarget(){
 	
@@ -146,7 +142,6 @@ else if (currentSum > targetNumber) {
 });
 
 
-//conditional statements to determine if the number has reached the target (win) or exceeded it (lose), record win/loss, restart
 
 
 

@@ -5,52 +5,57 @@
 	<title>Amber Orenstein|Crystal Collector</title>
 
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Additional CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!--Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
+
 
 </head>
 <body>
 
-<div class = "container">
+	<div class = "container">
 
-	<div class = "row">
-	<div class = "col-md-12">
-		<h1>Mathematical Bartender Game</h1>
-		<p>You will be given a random target number at the start of the game</p>
-		<p>There are four drinks below. Each has a mystery value between 1 and 12. By clicking a drink you will add points to your number.</p>
-		<p>You win the game by matching your number to the target number.</p> 
-		<p>You lose if your total score exceeds the target number.</p>
-		<p>Each time the game starts the values of the drinks and the target number will change</p>
-	  </div>
-	</div>
+		<div class = "row">
+			<div class = "col-md-9">
+				<h1>Crystal Collector Game</h1>
+				<p>You will be given a random target number at the start of the game</p>
+				<p>There are four crystals below. Each has a mystery value between 1 and 12. By clicking a crystal you will add points to your number.</p>
+				<p>You win the game by matching your number to the target number.</p> 
+				<p>You lose if your total score exceeds the target number.</p>
+				<p>Each time the game starts the values of the crystals and the target number will change</p>
 
-	<div class = "row">
+				<button class="btn btn-success" id="start-game" >
+					<h1>Start Game</h1>
+				</button>
 
-		<div class = "col-md-4">
-		  <button class="btn btn-success" id="start-game" >
-		  <h1>Start</h1>
-		  </button>
-		 </div>
-		
-	</div>
-
-
-	<div class = "row">
-		<div class = "col-md-3">
-			<div class="panel panel-default">
-				  <div class="panel-heading">
-				    <h3 class="panel-title">Target Number</h3>
-				  </div>
-				  <div class="panel-body"> 
-				  	<div id="target-number">
-				  	<strong></strong>
-				  	</div>
-				  </div>
+				<button class="crystal" id="crystal1" value=""><img src="assets/images/amber.png"></button>
+			<button class="crystal" id="crystal2" value=""><img src="assets/images/amethyst.png"></button>
+			<button class="crystal" id="crystal3" value=""><img src="assets/images/aquamarine.png"></button>
+			<button class="crystal" id="crystal4" value=""><img src="assets/images/peridot.png"></button>
 			</div>
-		</div>
 
-		<div class = "col-md-3">
-			<div class="panel panel-default">
+			<div class = col-md-3>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Losses</h3>
+					</div>
+					<div class="panel-body" id="losses">0</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Wins</h3>
+					</div>
+					<div class="panel-body" id="wins">0</div>
+				</div>
+
+				<div class="panel panel-default">
 				  <div class="panel-heading">
 				    <h3 class="panel-title">Your Number</h3>
 				  </div>
@@ -58,54 +63,36 @@
 				    <strong>0</strong>
 				  </div>
 			</div>
-		</div>
 
-		<div class = "col-md-3">
 			<div class="panel panel-default">
 				  <div class="panel-heading">
-				    <h3 class="panel-title">Wins</h3>
+				    <h3 class="panel-title">Target Number</h3>
 				  </div>
-				  <div class="panel-body" id="wins">0</div>
-			</div>
-		</div>
-
-		<div class = "col-md-3">
-			<div class="panel panel-default">
-				  <div class="panel-heading">
-				    <h3 class="panel-title">Losses</h3>
+				  <div class="panel-body" id="target-number">
+				    <strong>0</strong>
 				  </div>
-				  <div class="panel-body" id="losses">0</div>
 			</div>
-		</div>
-	</div>
+
+
+
+			</div>
+
+
 
 		</div>
-	</div>
 
-	<div class = "row">
-
-		<div class = "col-md-12">
-
-		<button class="crystal" id="crystal1" value=""><img src="assets/images/beer.png"></button>
-		<button class="crystal" id="crystal2" value=""><img src="assets/images/coffee.png"></button>
-		<button class="crystal" id="crystal3" value=""><img src="assets/images/drink.png"></button>
-		<button class="crystal" id="crystal4" value=""><img src="assets/images/wine.png"></button>
-		
-		</div>
-		
-	</div>
-
+	
 
 </div>
 
-	<!-- jQuery CDN -->
+<!-- jQuery CDN -->
 <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
 
-	<!--My JS -->
-  <script src = "assets/javascript/game.js"></script>
+<!--My JS -->
+<script src = "assets/javascript/game.js"></script>
 
 </body>
 </html>
